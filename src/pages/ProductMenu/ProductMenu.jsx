@@ -12,7 +12,7 @@ function ProductMenu() {
         <div className={styles.right}>
           <Link className={styles.button}>Bir baxışda</Link>
           <Link className={styles.button}>İnqridiyentlər</Link>
-          <Link to={"/how-to-use"} className={styles.button}>
+          <Link to={"how-to-use"} className={styles.button}>
             İstifadə qaydası
           </Link>
           <Link to={"/"} className={styles["back-btn"]}>

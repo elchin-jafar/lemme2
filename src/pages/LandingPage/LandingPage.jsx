@@ -4,12 +4,13 @@ import secondImage from "../../assets/landingPics/second.png";
 import thirdImage from "../../assets/landingPics/third.png";
 import qrCode from "../../assets/landingPics/qrCode.png";
 import searchIcon from "../../assets/landingPics/searchIcon.svg";
+import { Link } from "react-router-dom";
 
-import { useState } from "react";
+// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
   function handleProductName(event) {
@@ -29,11 +30,9 @@ function LandingPage() {
           onKeyDown={handleProductName}
         />
       </div>
-      <input
-        type="text"
-        className={styles["main-search-input"]}
-        placeholder="Dəri tipimi necə müəyyən edə bilərəm"
-      />
+      <Link to="/skin-type" className={styles["goto-skin-type"]}>
+        Dəri tipimi necə müəyyən edə bilərəm
+      </Link>
       <div className={styles["img-container"]}>
         <img src={firstImage} alt="broken" />
         <img src={secondImage} alt="" className={styles["second-img"]} />

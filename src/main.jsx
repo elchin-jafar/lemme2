@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import ProductMenu from "./pages/ProductMenu/ProductMenu";
 import HowToUse from "./pages/HowToUse/HowToUse";
+import SkinType from "./pages/SkinType/SkinType";
+import SkinTypeResult from "./pages/SkinTypeResult/SkinTypeResult";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +15,20 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "/productMenu",
+    path: "productMenu",
     element: <ProductMenu />,
   },
   {
-    path: "/how-to-use",
+    path: "productMenu/how-to-use",
     element: <HowToUse />,
+  },
+  {
+    path: "skin-type",
+    element: <SkinType />,
+  },
+  {
+    path: "skin-type/skin-type-res",
+    element: <SkinTypeResult />,
   },
 ]);
 
