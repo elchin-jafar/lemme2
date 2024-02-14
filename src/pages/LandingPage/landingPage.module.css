@@ -28,11 +28,12 @@
   border: none;
   font-size: 3.6rem;
   font-weight: 400;
-  padding: 2rem 20rem;
+  padding: 2rem 8.3rem;
   border-radius: 8rem;
   color: #2b2727;
   margin-bottom: 4rem;
   max-width: 64rem;
+  min-width: 64rem;
 }
 
 .goto-skin-type {
@@ -45,6 +46,7 @@
   color: rgba(43, 39, 39, 1);
   margin-bottom: 4rem;
   max-width: 64rem;
+  min-width: 64rem;
 }
 
 .img-container {
