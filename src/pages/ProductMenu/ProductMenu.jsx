@@ -11,7 +11,7 @@ function ProductMenu() {
         </div>
         <div className={styles.right}>
           <Link to={"first-look"} className={styles.button}>
-            Bir baxışda
+            İlk baxışda
           </Link>
           <Link to={"ingredients"} className={styles.button}>
             İnqridiyentlər
