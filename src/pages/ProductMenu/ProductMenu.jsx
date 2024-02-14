@@ -10,8 +10,12 @@ function ProductMenu() {
           <img src={frame} alt="" />
         </div>
         <div className={styles.right}>
-          <Link className={styles.button}>Bir baxışda</Link>
-          <Link className={styles.button}>İnqridiyentlər</Link>
+          <Link to={"first-look"} className={styles.button}>
+            Bir baxışda
+          </Link>
+          <Link to={"ingredients"} className={styles.button}>
+            İnqridiyentlər
+          </Link>
           <Link to={"how-to-use"} className={styles.button}>
             İstifadə qaydası
           </Link>

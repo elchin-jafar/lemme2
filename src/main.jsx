@@ -8,6 +8,8 @@ import ProductMenu from "./pages/ProductMenu/ProductMenu";
 import HowToUse from "./pages/HowToUse/HowToUse";
 import SkinType from "./pages/SkinType/SkinType";
 import SkinTypeResult from "./pages/SkinTypeResult/SkinTypeResult";
+import FirstLook from "./pages/FirstLook/FirstLook";
+import Ingredients from "./pages/Ingredients/Ingredients";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "productMenu/how-to-use",
     element: <HowToUse />,
+  },
+  {
+    path: "productMenu/first-look",
+    element: <FirstLook />,
+  },
+  {
+    path: "productMenu/ingredients",
+    element: <Ingredients />,
   },
   {
     path: "skin-type",

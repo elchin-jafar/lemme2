@@ -1,8 +1,8 @@
 import styles from "./models.module.css";
 
-import Smodel from "../assets/modelPics/Smodel.png";
-import Mmodel from "../assets/modelPics/Mmodel.png";
-import Lmodel from "../assets/modelPics/Lmodel.png";
+import Smodel from "../../assets/modelPics/Smodel.png";
+import Mmodel from "../../assets/modelPics/Mmodel.png";
+import Lmodel from "../../assets/modelPics/Lmodel.png";
 
 function Models() {
   return (
