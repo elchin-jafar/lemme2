@@ -5,19 +5,26 @@ import thirdImage from "../../assets/landingPics/third.png";
 import qrCode from "../../assets/landingPics/qrCode.png";
 import searchIcon from "../../assets/landingPics/searchIcon.svg";
 import { Link } from "react-router-dom";
-
-// import { useState } from "react";
+import { getProductByName } from "../../utils/apiUtils";
+import debounce from "../../utils/debounce";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
-  // const [inputValue, setInputValue] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  function handleProductName(event) {
-    if (event.key == "Enter") {
-      navigate("/productMenu");
-    }
+  const debounceOnChange = useCallback(debounce(onChange, 400), []);
+
+  const searchProduct = async (value) => {
+    const response = await getProductByName(value);
+    const data = response.data;
+    console.log(data);
+  };
+
+  function onChange(value) {
+    value && searchProduct(value);
   }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.logo}>Lemme</h1>
@@ -27,7 +34,7 @@ function LandingPage() {
           type="text"
           className={styles["main-search-input"]}
           placeholder="Məhsulun adı"
-          onKeyDown={handleProductName}
+          onChange={(e) => debounceOnChange(e.target.value)}
         />
       </div>
       <Link to="/skin-type" className={styles["goto-skin-type"]}>
