@@ -1,4 +1,4 @@
-import styles from "./SearchResult.module.css";
+import styles from "./searchResult.module.css";
 
 import { Link } from "react-router-dom";
 
