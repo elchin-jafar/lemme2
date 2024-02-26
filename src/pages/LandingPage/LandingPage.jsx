@@ -7,21 +7,25 @@ import searchIcon from "../../assets/landingPics/searchIcon.svg";
 import { Link } from "react-router-dom";
 import { getProductByName } from "../../utils/apiUtils";
 import debounce from "../../utils/debounce";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SearchResultList from "../../components/SearchResultList/SearchResultList";
 
 function LandingPage() {
   // const navigate = useNavigate();
+  const [results, setResults] = useState([]);
 
-  const debounceOnChange = useCallback(debounce(onChange, 400), []);
+  const debounceOnChange = useCallback(debounce(onChange, 300), []);
 
   const searchProduct = async (value) => {
     const response = await getProductByName(value);
     const data = response.data;
     console.log(data);
+    setResults(data);
   };
 
   function onChange(value) {
+    if (!value) setResults([]);
     value && searchProduct(value);
   }
 
@@ -36,6 +40,7 @@ function LandingPage() {
           placeholder="Məhsulun adı"
           onChange={(e) => debounceOnChange(e.target.value)}
         />
+        {results && <SearchResultList results={results} />}
       </div>
       <Link to="/skin-type" className={styles["goto-skin-type"]}>
         Dəri tipimi necə müəyyən edə bilərəm

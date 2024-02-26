@@ -4,7 +4,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage/LandingPage";
-import ProductMenu from "./pages/ProductMenu/ProductMenu";
+import ProductMenu, {
+  productMenuLoader,
+} from "./pages/ProductMenu/ProductMenu";
 import HowToUse from "./pages/HowToUse/HowToUse";
 import SkinType from "./pages/SkinType/SkinType";
 import SkinTypeResult from "./pages/SkinTypeResult/SkinTypeResult";
@@ -17,8 +19,9 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "productMenu",
+    path: "productMenu/:id",
     element: <ProductMenu />,
+    loader: productMenuLoader,
   },
   {
     path: "productMenu/how-to-use",
