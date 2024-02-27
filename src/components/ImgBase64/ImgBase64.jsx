@@ -1,4 +1,4 @@
-import styles from "./ImgBase64.module.css";
+import styles from "./imgBase64.module.css";
 
 // Converts image from base64 to jpeg
 
