@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Button({ to, children }) {
   return (
-    <Link to={to} className={styles["result-btn"]}>
+    <Link to={to} relative="path" className={styles["result-btn"]}>
       {children}
     </Link>
   );

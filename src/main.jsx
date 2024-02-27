@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <HowToUse />,
   },
   {
-    path: "productMenu/first-look",
+    path: "productMenu/:id/first-look",
     element: <FirstLook />,
   },
   {

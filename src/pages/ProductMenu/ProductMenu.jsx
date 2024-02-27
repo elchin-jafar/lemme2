@@ -1,21 +1,21 @@
 import styles from "./productMenu.module.css";
-import frame from "../../assets/productMenu/Frame.png";
 import { Link } from "react-router-dom";
 import { getProductById } from "../../utils/apiUtils";
 import { useLoaderData } from "react-router-dom";
+import { useProductStore } from "../../store/productStore";
+import ImgBase64 from "../../components/ImgBase64/ImgBase64";
 
 function ProductMenu() {
   const productData = useLoaderData();
+  const updateState = useProductStore((state) => state.update);
+  updateState(productData);
   console.log(productData);
   return (
     <>
       <div className={styles.container}>
         <div className="left">
-          <img
-            className={styles["product-img"]}
-            src={`data:image/jpeg;base64,${
-              productData?.images.at(0)?.fileBase64
-            }`}
+          <ImgBase64
+            data={productData?.images.at(0)?.fileBase64}
             alt="product photo"
           />
         </div>
