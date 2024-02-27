@@ -14,10 +14,17 @@ function SkinType() {
         <Header>Dəri tipim nədir?</Header>
 
         <div className="questions">
-          <Question question={"Dəriniz tez quruyur?"} />
-          <Question question={"Dəriniz tez quruyur?"} />
-          <Question question={"Dəriniz tez quruyur?"} />
-          <Question question={"Dəriniz tez quruyur?"} />
+          <Question question={"Təmizləndikdən sonra dəriniz necə hiss edir?"} />
+          <Question
+            question={"Nə qədər tez-tez qırışlar və ya ləkələr yaşayırsınız?"}
+          />
+          <Question question={"Dəriniz günəşə necə reaksiya verir?"} />
+          <Question question={"Dərinizin quruluşu necədir?"} />
+          <Question
+            question={
+              "Nəmləndirici tətbiq etdikdən bir neçə saat sonra dəriniz necə hiss edir?"
+            }
+          />
         </div>
 
         <div className={styles["btn-container"]}>
