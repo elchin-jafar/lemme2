@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     loader: productMenuLoader,
   },
   {
-    path: "productMenu/how-to-use",
+    path: "productMenu/:id/how-to-use",
     element: <HowToUse />,
   },
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: <FirstLook />,
   },
   {
-    path: "productMenu/ingredients",
+    path: "productMenu/:id/ingredients",
     element: <Ingredients />,
   },
   {

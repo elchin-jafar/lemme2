@@ -1,21 +1,23 @@
 import styles from "./howToUse.module.css";
-import frame from "../../assets/productMenu/Frame.png";
-import { Link } from "react-router-dom";
+import Button from "../../UI/Button/Button";
+import { useProductStore } from "../../store/productStore";
+import ImgBase64 from "../../components/ImgBase64/ImgBase64";
+
 function HowToUse() {
+  const productState = useProductStore((state) => state.product);
+  console.log("log from how to use", productState);
   return (
     <>
       <div className={styles.container}>
         <div className="left">
-          <img src={frame} alt="" />
+          <ImgBase64 data={productState?.images?.at(0)?.fileBase64} />
         </div>
         <div className={styles.right}>
           <p className={styles.button}>İstifadə qaydası</p>
-          <p className={styles.info}>
-            Üz üçün köpuyu 3 dəqiqə ərzində dərinizə masaj edib su ilə yuyun.
-          </p>
-          <Link to={"/productMenu"} className={styles["back-btn"]}>
+          <p className={styles.info}>{productState.howToUse}</p>
+          <Button to=".." className={styles["back-btn"]}>
             Geriyə
-          </Link>
+          </Button>
         </div>
       </div>
     </>

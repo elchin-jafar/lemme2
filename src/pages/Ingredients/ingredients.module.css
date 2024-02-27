@@ -20,3 +20,15 @@
   font-weight: 400;
   margin-bottom: 10rem;
 }
+
+.result-btn {
+  display: inline-block;
+  color: rgba(107, 104, 104, 1);
+  font-size: 3.7rem;
+  font-weight: 600;
+  background-color: rgba(255, 209, 219, 1);
+  padding: 1.5rem 4.4rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
